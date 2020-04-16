@@ -1,12 +1,12 @@
 import React from "react";
 import VideoItem from "./VideoItem";
 
-const VideoList = () => {
+const VideoList = (props) => {
   return (
     <div className="video-list">
-      <VideoItem />
-      <VideoItem />
-      <VideoItem />
+      {props.videos.map((video) => {
+        return <VideoItem title={video.video} />;
+      })}
     </div>
   );
 };
