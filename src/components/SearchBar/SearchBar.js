@@ -14,9 +14,11 @@ const SearchBar = (props) => {
           type="text"
           value={searchInput}
           placeholder="Search for videos"
+          name="video-search"
           onChange={(e) => setSearchInput(e.target.value)}
         />
       </form>
+      <button onClick={onFormSubmit}>Search</button>
     </div>
   );
 };
