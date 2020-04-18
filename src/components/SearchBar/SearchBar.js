@@ -8,9 +8,9 @@ const SearchBar = (props) => {
     setSearchInput("");
   };
   return (
-    <div className="search-bar ui segment">
+    <div className="ui segment">
       <form className="ui form" onSubmit={onFormSubmit}>
-        <div className="field">
+        <div className="ui form">
           <label>Video Search</label>
           <input
             type="text"
