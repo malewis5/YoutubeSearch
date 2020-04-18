@@ -4,21 +4,22 @@ const SearchBar = (props) => {
   const [searchInput, setSearchInput] = useState("");
   const onFormSubmit = (event) => {
     event.preventDefault();
-    props.searchFunction(searchInput);
+    props.onSearchSubmit(searchInput);
     setSearchInput("");
   };
   return (
-    <div className="searchBar">
-      <form className="search-form" onSubmit={onFormSubmit}>
-        <input
-          type="text"
-          value={searchInput}
-          placeholder="Search for videos"
-          name="video-search"
-          onChange={(e) => setSearchInput(e.target.value)}
-        />
+    <div className="search-bar ui segment">
+      <form className="ui form" onSubmit={onFormSubmit}>
+        <div className="field">
+          <label>Video Search</label>
+          <input
+            type="text"
+            value={searchInput}
+            placeholder="Search..."
+            onChange={(e) => setSearchInput(e.target.value)}
+          />
+        </div>
       </form>
-      <button onClick={onFormSubmit}>Search</button>
     </div>
   );
 };
