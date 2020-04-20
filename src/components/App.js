@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 
 // Custom Components
 import { SearchBar } from "./SearchBar/SearchBar";
-import VideoDetail from "./Videos/VideoDetail";
-import VideoList from "./Videos/VideoList";
+import { VideoDetail } from "./Videos/VideoDetail";
+import { VideoList } from "./Videos/VideoList";
 
 // API's
 import youtube from "./API/youtube";
@@ -29,6 +29,7 @@ const App = () => {
         type: "video",
         maxResults: 10,
         relevanceLanguage: "en",
+        videoSyndicated: true,
       },
     });
     setSelectedVideo(response.data.items[0]);
