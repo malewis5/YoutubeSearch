@@ -16,7 +16,22 @@ const App = () => {
 
   // Lifecycle
   useEffect(() => {
-    onSearchSubmit("buildings");
+    youtube
+      .get("/search", {
+        params: {
+          part: "snippet",
+          key: KEY,
+          type: "video",
+          maxResults: 10,
+          relevanceLanguage: "en",
+          videoSyndicated: true,
+          chart: "mostPopular",
+        },
+      })
+      .then((response) => {
+        setVideos(response.data.items);
+        setSelectedVideo(response.data.items[0]);
+      });
   }, []);
 
   // Helper Funcs

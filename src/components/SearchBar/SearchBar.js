@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Input } from "semantic-ui-react";
 
 export const SearchBar = (props) => {
   const [searchInput, setSearchInput] = useState("");
@@ -13,9 +14,8 @@ export const SearchBar = (props) => {
     <div className="ui segment">
       <form className="ui form" onSubmit={onFormSubmit}>
         <div className="ui form">
-          <label>Video Search</label>
-          <input
-            type="text"
+          <Input
+            action="Search"
             value={searchInput}
             placeholder="Search..."
             onChange={(e) => setSearchInput(e.target.value)}

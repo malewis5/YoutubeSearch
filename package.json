@@ -1,6 +1,6 @@
 {
   "name": "youtube-search",
-  "homepage": "https://malewis5.github.io/YoutubeSearch/",
+  "homepage": "http://malewis5.github.io/YoutubeSearch",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,7 +11,8 @@
     "gh-pages": "^2.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "semantic-ui-react": "^0.88.2"
   },
   "scripts": {
     "predeploy": "npm run build",
