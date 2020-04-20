@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 // Custom Components
-import SearchBar from "./SearchBar/SearchBar";
+import { SearchBar } from "./SearchBar/SearchBar";
 import VideoDetail from "./Videos/VideoDetail";
 import VideoList from "./Videos/VideoList";
 
@@ -15,9 +15,9 @@ const App = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   // Lifecycle
-  // useEffect(() => {
-  //   onSearchSubmit("buildings");
-  // });
+  useEffect(() => {
+    onSearchSubmit("buildings");
+  }, []);
 
   // Helper Funcs
   const onSearchSubmit = async (term) => {

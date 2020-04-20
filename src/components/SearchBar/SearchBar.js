@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 
-const SearchBar = (props) => {
+export const SearchBar = (props) => {
   const [searchInput, setSearchInput] = useState("");
-  const onFormSubmit = (event) => {
+
+  function onFormSubmit(event) {
     event.preventDefault();
     props.onSearchSubmit(searchInput);
     setSearchInput("");
-  };
+  }
+
   return (
     <div className="ui segment">
       <form className="ui form" onSubmit={onFormSubmit}>
@@ -23,5 +25,3 @@ const SearchBar = (props) => {
     </div>
   );
 };
-
-export default SearchBar;
